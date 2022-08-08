@@ -13,17 +13,18 @@
     justify-content: center;
     align-items: center;
     background-color: black;
-    animation: container 10s ease-in backwards infinite alternate 5s;
+    animation: backgroundColor 10s ease-in backwards infinite alternate 5s;
 }
 
-@keyframes container {
+@keyframes backgroundColor {
     to {
         background-color: #fff;
     }
 }
 
 #githubAvatar {
-    animation: avatar 3s both ease-out, avatarBorder 10s ease-in backwards infinite alternate 5s;
+    padding: 8px;
+    animation: avatar 3s both ease-out, borderColor 10s ease-in backwards infinite alternate 5s;
 }
 
 @keyframes avatar {
@@ -38,13 +39,11 @@
     }
 }
 
-@keyframes avatarBorder {
+@keyframes borderColor {
     from {
-        padding: 8px;
         border: 1px solid white;
     }
     to {
-        padding: 8px;
         border: 1px solid black;
     }
 }
@@ -60,7 +59,7 @@
 #userName {
     color: white;
     font-size: 24pt;
-    animation: userColor 10s ease-in backwards infinite alternate 5s;
+    animation: fontColor 10s ease-in backwards infinite alternate 5s;
     cursor: default;
 }
 
@@ -79,7 +78,7 @@
     }
 }
 
-@keyframes userColor {
+@keyframes fontColor {
     to {
         color: black;
     }
@@ -96,7 +95,7 @@
     color: white;
     margin-top: 2px;
     margin-right: 5px;
-    animation: description 1s 3s both ease-out, userColor 10s ease-in backwards infinite alternate 5s;
+    animation: description 1s 3s both ease-out, fontColor 10s ease-in backwards infinite alternate 5s;
 }
 
 @keyframes description {
@@ -159,10 +158,12 @@
 }
 
 .btn {
-    background: #fff;
     border: 2px solid #e6e6e6;
     display: flex;
     cursor: pointer;
+    background-color: black;
+    color: white;
+    animation: backgroundColor  10s ease-in backwards infinite alternate 5s, borderColor 10s ease-in forwards infinite alternate 5s, fontColor 10s ease-in backwards infinite alternate 5s;
 }
 
 .circular-btn {
