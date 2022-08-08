@@ -33,7 +33,7 @@
     }
 
     to {
-        width: 200px;
+        width: 250px;
         border-radius: 100%;
     }
 }
@@ -61,11 +61,13 @@
     color: white;
     font-size: 24pt;
     animation: userColor 10s ease-in backwards infinite alternate 5s;
+    cursor: default;
 }
 
 #verified {
     width: 20px;
     margin-left: 8px;
+    animation: opacity 0.5s 3s ease-in both;
 }
 
 @keyframes opacity {
@@ -83,10 +85,11 @@
     }
 }
 
-.description-country {
+.description-flag {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: default;
 }
 
 #description {
@@ -108,13 +111,47 @@
 }
 
 #flag {
-    animation: opacity 0.5s 4s both linear;
+    animation: opacity 0.5s 4s both linear, flag 2s 3.5s both cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+}
+
+@keyframes flag {
+    from {
+        left: 100px;
+    }
+    to {
+        left: 0;
+    }
 }
 
 #social-buttons {
     display: flex;
     align-items: center;
     margin-top: 5px;
+}
+
+#linkedIn {
+    animation: opacity 0.5s 5.1s both linear, buttonsUp 1s 5s both cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+}
+
+#github {
+    position: relative;
+    animation: opacity 0.5s 5.3s both linear, buttonsUp 1s 5.25s both cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+#instagram {
+    position: relative;
+    animation: opacity 0.5s 5.6s both linear, buttonsUp 1s 5.5s both cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes buttonsUp {
+    from {
+        top: 100px;
+    }
+    to {
+        top: 0;
+    }
 }
 
 .btn, .social-button-h {
@@ -124,11 +161,6 @@
 .btn {
     background: #fff;
     border: 2px solid #e6e6e6;
-    color: #000;
-    font-family: "Ginora Sans";
-    font-weight: 700;
-    text-align: center;
-    text-decoration: none;
     display: flex;
     cursor: pointer;
 }
@@ -154,17 +186,7 @@
 }
 
 .svg-inline--fa {
-    display: inline-block;
-    font-size: inherit;
     height: 1em;
-    overflow: visible;
     vertical-align: -0.125em;
 }
 
-.svg-inline--fa.fa-w-14 {
-    width: 0.875em;
-}
-
-svg:not(:root).svg-inline--fa {
-    overflow: visible;
-}
