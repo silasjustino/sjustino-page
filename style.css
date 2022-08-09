@@ -22,6 +22,12 @@
     }
 }
 
+#theme {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
 #githubAvatar {
     padding: 8px;
     animation: avatar 3s both ease-out, borderColor 10s ease-in backwards infinite alternate 5s;
