@@ -1,6 +1,7 @@
 # My Webpage
 
 Initial webpage project that contains links to my social medias.
+Created based on Instagram style.
 
 ## Contains
 
