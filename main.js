@@ -7,17 +7,13 @@ const userName = document.getElementById("userName")
 const description = document.getElementById("description")
 const btns = document.querySelectorAll("#btn")
 
-function checkTheme() {
-    if ( container.classList.contains("background-black") === true ) {
-        console.log("hey")
-    }
-}
-
-
 
 function changeTheme() {
-    checkTheme()
-    if ( container.classList.contains("background-black") && githubAvatar.classList.contains("borderColor") && userName.classList.contains("fontColor") && description.classList.contains("fontColor") ) {
+    const isBackgroundBlack = container.classList.contains("background-black");
+    const hasBorderColor = githubAvatar.classList.contains("borderColor");
+    const hasFontColor = userName.classList.contains("fontColor") && description.classList.contains("fontColor");
+
+    if (isBackgroundBlack && hasBorderColor && hasFontColor) {
         container.classList.remove("background-black")
         githubAvatar.classList.remove("borderColor")
         userName.classList.remove("fontColor")
@@ -30,7 +26,7 @@ function changeTheme() {
 
     }
     btns.forEach(btn => {
-        if ( btn.classList.contains("fontColor") && btn.classList.contains("background-black") && btn.classList.contains("borderColor") ) {
+        if (btn.classList.contains("fontColor") && btn.classList.contains("background-black") && btn.classList.contains("borderColor")) {
             btn.classList.remove("fontColor")
             btn.classList.remove("background-black")
             btn.classList.remove("borderColor")
@@ -42,18 +38,18 @@ function changeTheme() {
     })
 }
 
-(function() {
+(function () {
     btnTheme.onclick = changeTheme
- })();
+})();
 
 function getAvatar() {
     fetch(url)
-    .then(response => response.json())
-    .then(data =>  {
-        console.log(data.avatar_url)
-        githubAvatar.src = data.avatar_url
-    })
-    .catch(error => console.log(error))
+        .then(response => response.json())
+        .then(data => {
+            console.log(data.avatar_url)
+            githubAvatar.src = data.avatar_url
+        })
+        .catch(error => console.log(error))
 }
 getAvatar()
 
