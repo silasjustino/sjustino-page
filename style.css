@@ -12,6 +12,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transition: background-color 1s ease-out;
 }
 
 .background-black {
@@ -19,12 +20,15 @@
 }
 
 #btnTheme {
+    width: 70px;
+    font-weight: bold;
     position: absolute;
     right: 20px;
     top: 20px;
     border-radius: 20px;
     padding: 0 8px;
     cursor: pointer;
+    transition: background-color 1s ease-out;
 }
 
 .githubAvatar {
@@ -156,6 +160,7 @@
 .btn {
     display: flex;
     cursor: pointer;
+    transition: background-color 1s ease-out;
 }
 
 .circular-btn {

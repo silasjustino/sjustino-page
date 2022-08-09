@@ -7,22 +7,37 @@ const userName = document.getElementById("userName")
 const description = document.getElementById("description")
 const btns = document.querySelectorAll("#btn")
 
-
 function changeTheme() {
     const isBackgroundBlack = container.classList.contains("background-black");
     const hasBorderColor = githubAvatar.classList.contains("borderColor");
     const hasFontColor = userName.classList.contains("fontColor") && description.classList.contains("fontColor");
+    const isButtonBlack = btnTheme.classList.contains("background-black") && btnTheme.classList.contains("borderColor") && btnTheme.classList.contains("fontColor");
 
-    if (isBackgroundBlack && hasBorderColor && hasFontColor) {
+    if (isBackgroundBlack && hasBorderColor && hasFontColor && isButtonBlack) {
+
+        btnTheme.textContent = "LIGHT"
+
         container.classList.remove("background-black")
         githubAvatar.classList.remove("borderColor")
         userName.classList.remove("fontColor")
         description.classList.remove("fontColor")
+
+        btnTheme.classList.remove("background-black")
+        btnTheme.classList.remove("borderColor")
+        btnTheme.classList.remove("fontColor")
+
     } else {
+
+        btnTheme.textContent = "DARK"
+
         container.classList.add("background-black")
         githubAvatar.classList.add("borderColor")
         userName.classList.add("fontColor")
         description.classList.add("fontColor")
+
+        btnTheme.classList.add("background-black")
+        btnTheme.classList.add("borderColor")
+        btnTheme.classList.add("fontColor")
 
     }
     btns.forEach(btn => {
