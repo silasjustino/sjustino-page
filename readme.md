@@ -8,8 +8,5 @@ Initial webpage project that contains links to my social medias.
 - Custom Animations
 - Link to LinkedIn, Github and Instagram
 - Button to Light/Dark Theme
-
-## Ideas to improve
-
 - Transition to Light/Dark Theme
 
