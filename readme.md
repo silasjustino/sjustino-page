@@ -7,8 +7,9 @@ Initial webpage project that contains links to my social medias.
 - GitHub Avatar by API
 - Custom Animations
 - Link to LinkedIn, Github and Instagram
+- Button to Light/Dark Theme
 
 ## Ideas to improve
 
-- Button to change to Light/Both/Dark Theme
+- Transition to Light/Dark Theme
 
