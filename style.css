@@ -12,25 +12,29 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.background-black {
     background-color: black;
-    animation: backgroundColor 10s ease-in backwards infinite alternate 5s;
 }
 
-@keyframes backgroundColor {
-    to {
-        background-color: #fff;
-    }
-}
-
-#theme {
+#btnTheme {
     position: absolute;
     right: 20px;
     top: 20px;
+    border-radius: 20px;
+    padding: 0 8px;
+    cursor: pointer;
 }
 
-#githubAvatar {
+.githubAvatar {
     padding: 8px;
-    animation: avatar 3s both ease-out, borderColor 10s ease-in backwards infinite alternate 5s;
+    border: 1px solid black;
+    animation: avatar 3s both ease-out;
+}
+
+.borderColor {
+    border: 1px solid white;
 }
 
 @keyframes avatar {
@@ -45,15 +49,6 @@
     }
 }
 
-@keyframes borderColor {
-    from {
-        border: 1px solid white;
-    }
-    to {
-        border: 1px solid black;
-    }
-}
-
 .title-badge {
     display: flex;
     align-items: center;
@@ -62,11 +57,13 @@
     animation: opacity 3s ease-out both 2s;
 }
 
-#userName {
-    color: white;
+.userName {
     font-size: 24pt;
-    animation: fontColor 10s ease-in backwards infinite alternate 5s;
     cursor: default;
+}
+
+.fontColor {
+    color: white;
 }
 
 #verified {
@@ -84,12 +81,6 @@
     }
 }
 
-@keyframes fontColor {
-    to {
-        color: black;
-    }
-}
-
 .description-flag {
     display: flex;
     justify-content: center;
@@ -97,11 +88,10 @@
     cursor: default;
 }
 
-#description {
-    color: white;
+.description {
     margin-top: 2px;
     margin-right: 5px;
-    animation: description 1s 3s both ease-out, fontColor 10s ease-in backwards infinite alternate 5s;
+    animation: description 1s 3s both ease-out;
 }
 
 @keyframes description {
@@ -164,12 +154,8 @@
 }
 
 .btn {
-    border: 2px solid #e6e6e6;
     display: flex;
     cursor: pointer;
-    background-color: black;
-    color: white;
-    animation: backgroundColor  10s ease-in backwards infinite alternate 5s, borderColor 10s ease-in forwards infinite alternate 5s, fontColor 10s ease-in backwards infinite alternate 5s;
 }
 
 .circular-btn {
