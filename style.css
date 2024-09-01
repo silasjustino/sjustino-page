@@ -144,6 +144,11 @@
     animation: opacity 0.5s 5.6s both linear, buttonsUp 1s 5.5s both cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
+#itch_io {
+    position: relative;
+    animation: opacity 0.5s 5.9s both linear, buttonsUp 1s 5.75s both cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
 @keyframes buttonsUp {
     from {
         top: 100px;
