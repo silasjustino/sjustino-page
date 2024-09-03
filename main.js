@@ -101,7 +101,7 @@ function getAvatar() {
         .then(data => {
             console.log(data.avatar_url)
             githubAvatar.src = data.avatar_url
-            loadAnimation();
+            setTimeout(loadAnimation(), 500);
         })
         .catch(error => console.log(error))
 }
