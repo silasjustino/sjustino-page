@@ -32,9 +32,9 @@
 }
 
 .githubAvatar {
+    visibility: hidden;
     padding: 8px;
     border: 1px solid black;
-    animation: avatar 3s both ease-out;
 }
 
 .borderColor {
@@ -54,11 +54,11 @@
 }
 
 .title-badge {
+    visibility: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 12px;
-    animation: opacity 3s ease-out both 2s;
 }
 
 .userName {
@@ -71,9 +71,9 @@
 }
 
 #verified {
+    visibility: hidden;
     width: 20px;
     margin-left: 8px;
-    animation: opacity 0.5s 3s ease-in both;
 }
 
 @keyframes opacity {
@@ -93,9 +93,9 @@
 }
 
 .description {
+    visibility: hidden;
     margin-top: 2px;
     margin-right: 5px;
-    animation: description 1s 3s both ease-out;
 }
 
 @keyframes description {
@@ -110,7 +110,7 @@
 }
 
 #flag {
-    animation: opacity 0.5s 4s both linear, flag 2s 3.5s both cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    visibility: hidden;
     position: relative;
 }
 
@@ -130,23 +130,23 @@
 }
 
 #linkedIn {
-    animation: opacity 0.5s 5.1s both linear, buttonsUp 1s 5s both cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    visibility: hidden;
     position: relative;
 }
 
 #github {
+    visibility: hidden;
     position: relative;
-    animation: opacity 0.5s 5.3s both linear, buttonsUp 1s 5.25s both cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 #instagram {
+    visibility: hidden;
     position: relative;
-    animation: opacity 0.5s 5.6s both linear, buttonsUp 1s 5.5s both cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 #itch_io {
+    visibility: hidden;
     position: relative;
-    animation: opacity 0.5s 5.9s both linear, buttonsUp 1s 5.75s both cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 @keyframes buttonsUp {
